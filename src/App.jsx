@@ -5,6 +5,7 @@ import gsap from "gsap"
 
 import Navbar from "./components/Navbar";
 import StickyNav from "./components/StickyNav";
+import ScrollToTop from "./components/ScrollToTop";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +23,7 @@ const App = () => {
 
   return (
     <>
+      <ScrollToTop navInView={navInView} />
       <StickyNav navInView={navInView} />
       <Navbar handleNavView={handleNavOpacityToggle}/>
       <Routes key={location.pathname} location={location}>

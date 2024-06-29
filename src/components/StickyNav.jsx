@@ -9,7 +9,7 @@ const StickyNav = (props) => {
     const isSignedIn = false;
 
   return (
-    <nav className={`w-full h-[10vh] px-48 flex items-center justify-between bg-white fixed top-0 left-0 transition-all duration-200 ${props.navInView ? "-translate-y-[100%]" : "translate-y-0"}`}>
+    <nav className={`w-full h-[10vh] px-48 flex items-center justify-between bg-white fixed z-[100] top-0 left-0 transition-all duration-200 ${props.navInView ? "-translate-y-[100%]" : "translate-y-0"}`}>
         <h1 className="font-extrabold font-anton text-4xl">BLVCKBOARD</h1>
         <div className="flex items-center gap-x-5">
             {navLinks.map((navlink, index) => (
