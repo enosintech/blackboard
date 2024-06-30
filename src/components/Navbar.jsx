@@ -2,10 +2,11 @@ import { useGSAP } from "@gsap/react";
 import { useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { navLinks, sectionLinks } from "../constants";
 import { Link, useLocation } from "react-router-dom";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
+
+import { navLinks, sectionLinks } from "../constants";
 
 const Navbar = (props) => {
   const navRef = useRef();
@@ -14,7 +15,7 @@ const Navbar = (props) => {
 
   const isSignedIn = false;
 
-  const updateValues = () => {
+  const updateNavVisibility = () => {
     if(ScrollTrigger.isInViewport(navRef.current)){
       props.handleNavView(true)
     } else {
@@ -26,7 +27,7 @@ const Navbar = (props) => {
     ScrollTrigger.create({
       start: 0,
       end: ScrollTrigger.maxScroll(window),
-      onUpdate: updateValues
+      onUpdate: updateNavVisibility
     })
 
     gsap.timeline({
@@ -37,28 +38,28 @@ const Navbar = (props) => {
       }
     })
     .to(".promo1", {
-      xPercent: -102,
+      xPercent: -100,
       duration: 15,
     })
     .to(".promo2", {
-      xPercent: -102,
+      xPercent: -100,
       duration: 15,
     }, "<")
   }, [])
 
   useEffect(() => {
-    updateValues();
+    updateNavVisibility();
   }, [])
 
   return (
     <nav ref={navRef} className='w-full h-[22vh] flex flex-col relative'>
-      <div className={`w-full h-[20%] px-2 text-[10px] top-0 left-0 pt-1 transition-all duration-200 flex justify-between ${location.pathname === "/" ? "opacity-100" : "opacity-0"}`}>
+      <div className={`w-full h-[20%] px-2 text-[12px] top-0 left-0 pt-1 transition-all duration-200 flex justify-between ${location.pathname === "/" ? "opacity-100" : "opacity-0"}`}>
         <div className="flex gap-x-2 promo1">
           <p>10% OFF YOUR FIRST ORDER</p>
           <p>•</p>
           <p>FREE INTERNATIONAL SHIPPING ON ORDERS OVER 500 KWACHA</p>
         </div>
-        <div className="flex gap-x-2 promo2 translate-x-[102%]">
+        <div className="flex gap-x-2 promo2 translate-x-[100%]">
           <p>10% OFF YOUR FIRST ORDER</p>
           <p>•</p>
           <p>FREE INTERNATIONAL SHIPPING ON ORDERS OVER 500 KWACHA</p>

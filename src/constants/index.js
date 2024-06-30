@@ -43,3 +43,31 @@ export const navLinks = [
         link: "",
     },
 ]
+
+export const footerUsefulLinks = [
+    {
+        id: 1,
+        name: "Privacy Policy",
+        link: "",
+    },
+    {
+        id: 2,
+        name: "Terms and Conditions",
+        link: "",
+    },
+    {
+        id: 3,
+        name: "Returns",
+        link: "",
+    },
+    {
+        id: 4,
+        name: "Site Map",
+        link: "",
+    },
+    {
+        id: 5,
+        name: "Contact Us",
+        link: "",
+    },
+]
