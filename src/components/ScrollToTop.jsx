@@ -7,9 +7,11 @@ const ScrollToTop = (props) => {
       window.scrollTo({
         top: 0,
         left: 0,
-        behavior: "instant"
+        behavior: "smooth"
       })
-    }} className={`fixed bottom-12 right-5 w-14 h-14 rounded-full deep-shadow hover-action bg-slate-100 flex items-center justify-center transition-all duration-500 ${props.navInView ? "translate-x-[200%]" : "translate-x-0"}`}>
+    }} style={{
+      transform: props.navInView ? `translateX(200%)` : `translateX(0)`
+    }} className={`fixed bottom-12 right-5 w-14 h-14 rounded-full deep-shadow hover-action bg-slate-100 flex items-center justify-center transition-all duration-500`}>
       <FontAwesomeIcon icon={faChevronUp} color="black" size="xl" />
     </div>
   )

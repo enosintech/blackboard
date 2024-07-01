@@ -1,6 +1,8 @@
 import FeaturedContent from "./FeaturedContent";
 import NewArrivals from "./NewArrivals";
 
+import { featuredHoodies, featuredTees, featuredBottoms, featuredAccessories } from "../constants";
+
 const Featured = () => {
   return (
     <div className='w-full h-fit px-48 py-10 flex flex-col gap-y-8'>
@@ -9,19 +11,19 @@ const Featured = () => {
       </div>
       
       <div className='w-full h-[400px] flex flex-col'>
-        <FeaturedContent />
+        <FeaturedContent featured={featuredHoodies} />
       </div>
 
       <div className='w-full h-[400px] flex flex-col'>
-        <FeaturedContent />
+        <FeaturedContent featured={featuredTees} />
       </div>
 
       <div className='w-full h-[400px] flex flex-col'>
-        <FeaturedContent />
+        <FeaturedContent featured={featuredBottoms} />
       </div>
 
       <div className='w-full h-[400px] flex flex-col'>
-        <FeaturedContent />
+        <FeaturedContent featured={featuredAccessories} />
       </div>
 
       <div className="w-full h-[100px] flex items-center justify-center">

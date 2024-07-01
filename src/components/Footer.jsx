@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-import { footerUsefulLinks } from "../constants";
+import { footerUsefulLinks, paymentMethods } from "../constants";
 
 const Footer = () => {
   return (
@@ -18,12 +18,28 @@ const Footer = () => {
       <footer className='w-full h-[45vh] bg-black flex flex-col text-white'>
         <div className='w-full h-[90%] px-48 flex'>
           <div className='w-1/3 h-full flex flex-col'>
-            <div className='w-full h-[65%] flex items-center pl-5'>
+            <div className='w-full h-[65%] flex pt-5 pl-5'>
+              <div className="flex flex-col gap-y-4">
+                <p className="font-bold text-lg">PAY WITH</p>
+                <div className="flex items-center gap-x-4">
+                  {paymentMethods.map((method, index) => (
+                    <img className="w-14 h-8 object-cover" src={method.image} key={method.id} index={index} />
+                  ))}
+                </div>
+              </div>
             </div>
             <div className='w-full h-[35%] overflow-hidden'>
-              <p className='text-[10px] w-full h-full px-6 font-light flex items-center justify-center'>
+              <p className='text-[12px] tracking-tight w-full h-full px-6 font-light flex items-center justify-center'>
                 Blackboard, a top streetwear label, is dedicated to quality. Each piece is crafted with care, using the best materials and techniques. Our strict quality control ensures every garment exceeds standards. Choose Blackboard for timeless craftsmanship and style.
               </p>
+            </div>
+          </div>
+          <div className='w-1/3 h-full flex justify-end pt-5 pr-5'>
+            <div className="flex flex-col">
+              <div className="p-5 w-fit h-fit bg-white">
+                <p className="text-black font-anton text-3xl">BLVCKBOARD™</p>
+              </div>
+              <p className="text-[12px] font-light text-right mt-4 select-text">inquiries@blackboard.com</p>    
             </div>
           </div>
           <div className='w-1/3 h-full flex justify-end pt-5 pr-5'>
@@ -34,14 +50,6 @@ const Footer = () => {
                   <p key={link.id} index={index} className="font-light hover:underline cursor-pointer">{link.name}</p>
                 ))}
               </div>
-            </div>
-          </div>
-          <div className='w-1/3 h-full flex justify-end pt-5 pr-5'>
-            <div className="flex flex-col">
-              <div className="p-5 w-fit h-fit bg-white">
-                <p className="text-black font-anton text-3xl">BLVCKBOARD™</p>
-              </div>
-              <p className="text-[12px] font-light text-right mt-4 select-text">inquiries@blackboard.com</p>    
             </div>
           </div>
         </div>
