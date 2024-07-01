@@ -9,6 +9,7 @@ import { navLinks, sectionLinks } from "../constants";
 import { shoppingBag } from "../lib";
 
 const Navbar = (props) => {
+
   const navRef = useRef();
   
   const location = useLocation();
@@ -45,6 +46,7 @@ const Navbar = (props) => {
       xPercent: -100,
       duration: 15,
     }, "<")
+    
   }, [])
 
   useEffect(() => {
