@@ -179,16 +179,21 @@ export const paymentMethods = [
         id: 1,
         name: "Airtel",
         image: airtelImg,
+        color: "red",
+        fit: "contain"
     },
     {
         id: 2,
         name: "Mtn",
         image: mtnImg,
+        color: "yellow",
+        fit: "contain"
     },
     {
         id: 1,
         name: "Visa",
         image: visaImg,
+        fit: "cover",
     },
 ]
 

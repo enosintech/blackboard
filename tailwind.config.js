@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "anton" : '"Anton", sans-serif',
+        "anton" : 'Anton, sans-serif',
       }
     },
   },

@@ -6,6 +6,7 @@ import { featuredHoodies, featuredTees, featuredBottoms, featuredAccessories } f
 const Featured = () => {
   return (
     <div className='w-full h-fit px-48 py-10 flex flex-col gap-y-8'>
+    
       <div className='w-full h-[650px] flex flex-col'>
         <NewArrivals />
       </div>
@@ -28,9 +29,10 @@ const Featured = () => {
 
       <div className="w-full h-[100px] flex items-center justify-center">
         <div className="bg-black text-white px-10 py-2 hover-action">
-          <p className="font-extrabold">VIEW ALL ITEMS</p>
+          <p className="font-extrabold text-[1vw]">SHOP ALL ITEMS</p>
         </div>
       </div>
+
     </div>
   )
 }

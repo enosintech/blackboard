@@ -55,7 +55,7 @@ const Navbar = (props) => {
 
   return (
     <nav ref={navRef} className='w-full h-[22vh] flex flex-col relative'>
-      <div className={`w-full h-[20%] px-2 text-[12px] top-0 left-0 pt-1 transition-all duration-200 flex justify-between ${location.pathname === "/about" ? "opacity-0" : "opacity-100"}`}>
+      <div className={`w-full h-[20%] px-2 text-[0.6vw] top-0 left-0 pt-1 transition-all duration-200 flex justify-between ${location.pathname === "/about" ? "opacity-0" : "opacity-100"}`}>
         <div className="flex gap-x-2 promo1">
           <p>10% OFF YOUR FIRST ORDER</p>
           <p>•</p>
@@ -68,12 +68,12 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="w-full h-[40%] flex items-center justify-between px-48">
-        <h1 className="font-extrabold font-anton text-4xl">BLVCKBOARD</h1>
-        <div className="flex items-center gap-x-6">
+        <h1 className="font-black tracking-tight font-sans text-[2.4vw] thin">BLVCKBOARD</h1>
+        <div className="flex items-center gap-x-6 text-[1.15vw]">
           {isSignedIn ? 
-            <p className="font-black tracking-tight text-lg hover-action">ACCOUNT</p>
+            <p className="font-black tracking-tight hover-action">ACCOUNT</p>
           :
-            <p className="font-black tracking-tight text-lg hover-action">LOGIN</p>
+            <p className="font-black tracking-tight hover-action">LOGIN</p>
           }
           <div className="relative">
             <div className="w-4 h-4 rounded-full bg-red-600 absolute z-20 pointer-events-none top-0 right-0 flex items-center justify-center">
@@ -85,12 +85,12 @@ const Navbar = (props) => {
       </div>
       <div className="w-full h-[40%] flex items-end justify-center pb-5 px-48">
         <div className="w-full h-fit flex items-center justify-between">
-          <div className="flex items-center gap-x-5 relative z-20">
+          <div className="flex items-center gap-x-5 relative z-20 text-[1.1vw]">
             {sectionLinks.map((sectionlink, index) => (
               <Link to={sectionlink.link} key={sectionlink.id} index={index} className={`font-black tracking-tight hover-action transition-all ${location.pathname === sectionlink.link ? "bg-black text-white rounded-full px-3 p-1 deep-shadow" : "bg-slate-50 rounded-full text-black px-3 p-1 deep-shadow"}`}>{sectionlink.name}</Link>
             ))}
           </div>
-          <div className="flex items-center gap-x-5">
+          <div className="flex items-center gap-x-5 text-[1.1vw]">
             {navLinks.map((navlink, index) => (
               <div key={navlink.id} index={index} className="flex flex-col group">
                 <Link to={navlink.link} className={`tracking-tight cursor-pointer transition-all font-medium ${navlink.name === "SALE" ? "text-red-600" : "text-black"}`}>{navlink.name}</Link>

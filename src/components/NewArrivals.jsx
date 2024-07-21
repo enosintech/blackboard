@@ -5,7 +5,7 @@ import ItemDetail from "./ItemDetail";
 const NewArrivals = () => {
   return (
     <>
-        <div className='w-full h-[5%] flex items-center justify-between text-2xl'>
+        <div className='w-full h-[5%] flex items-center justify-between text-[1.5vw]'>
             <p className="font-black">NEW ARRIVALS</p>
             <p className="font-extralight">JULY 2024 COLLECTION</p>
         </div>
